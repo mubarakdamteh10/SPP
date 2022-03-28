@@ -1,21 +1,30 @@
 from speechtext import *
+from random import *
+from playsound import  playsound
 
-def status():
-    light_value = NULL
-    water_value = NULL
-    watering_time = 3000000000
 
-    if light_value != 0 and water_value != 0:
-        if light_value > 100 :
-            print("bring tactus to another place here is too warm")
-            return speechtext("bring tactus to another place here is too warm")
-        elif light_value <= 50:
-            print("the tactus need more sun light ")
-        elif water_value > 50 :
-            print("there is too much water for taccus now")
-            return speechtext("there is too much water for taccus now")
-        elif water_value <= 15 :
-            print("the tactus need more water")
-            return speechtext("the tactus need more water")
-        elif water_value > 50 and light_value <= 50 :
-            print("")
+def checking():
+    w = water_status()
+    l = light_status()
+    if l != "" and w != "":
+        if l == True:
+            speechtext("lighting on")
+        elif w == True:
+            speechtext("watering on")
+        elif l == False:
+            speechtext("lighting off")
+        elif w == False:
+            speechtext("watering off")
+    else:
+        speechtext("No status")
+
+
+def light_status():
+    status = [True,False]
+    light_value = sample(status,1)
+    print(light_value)
+
+def water_status():
+    status = [True,False]
+    water_value = sample(status,1)
+    print(water_value)

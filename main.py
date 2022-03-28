@@ -9,7 +9,7 @@ with mic as source:
     while True:
         audio = recog.listen(source)
         try:
-            voice = recog.recognize_google(audio,language='en')
+            voice = recog.recognize_google(audio,language='th')
             print(voice)
             print(call_in_function(voice))
             print("New Command")

@@ -8,7 +8,7 @@ def call_in_function(sound):
         print("show water status")
         return speechtext("show water status")
         
-    elif sound == "sunlight" :
+    elif sound == "แสงแดด" :
         print("open sunlight")
         return speechtext("open sunlight")
     elif sound == "status":
