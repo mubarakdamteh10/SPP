@@ -3,10 +3,12 @@ import speech_recognition as sr
 from callfunction import *
 
 # print(sr.Microphone.list_microphone_names())
+
 mic = sr.Microphone(1)
 recog = sr.Recognizer()
 with mic as source:
     while True:
+        print("say something !")
         audio = recog.listen(source)
         try:
             voice = recog.recognize_google(audio,language='th')
@@ -15,4 +17,5 @@ with mic as source:
             print("New Command")
         except:
             continue
+        print("out")
         
