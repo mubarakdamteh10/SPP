@@ -9,7 +9,7 @@ recog = sr.Recognizer()
 with mic as source:
     while True:
         print("say something !")
-        audio = recog.listen(source)
+        audio = recog.listen(source,timeout=5.0)
         try:
             voice = recog.recognize_google(audio,language='th')
             print(voice)

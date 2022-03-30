@@ -1,6 +1,5 @@
 from speechtext import *
 from random import *
-from playsound import  playsound
 
 def light_status():
     status = [True,False]
