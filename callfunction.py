@@ -1,5 +1,3 @@
-import datetime
-import random
 from speechtext import *
 from status import display_value
 
